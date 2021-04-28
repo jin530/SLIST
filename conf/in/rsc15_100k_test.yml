@@ -1,0 +1,37 @@
+---
+type: single_all # single|window, maybe add opt
+key: baselines #added to the csv names
+evaluation: evaluation #evaluation|evaluation_last|evaluation_multiple
+data:
+  name: rsc15-100k #added in the end of the csv names
+  folder: data/rsc15/prepared/
+  prefix: yoochoose-clicks-100k
+  opts: {sessions_test: 1000}
+
+results:
+  folder: results/opt/rsc15-clicks100k/
+
+metrics_next:
+- class: accuracy.HitRate
+  length: [5, 10, 20]
+- class: accuracy.MRR
+  length: [5, 10, 20]
+- class: time_memory_usage.Time_usage_training
+  
+metrics_multiple:
+- class: accuracy_multiple.Precision
+  length: [5, 10, 20]
+- class: accuracy_multiple.Recall
+  length: [5, 10, 20]
+- class: accuracy_multiple.MAP
+  length: [5, 10, 20]
+- class: time_memory_usage.Time_usage_testing
+
+algorithms:
+# Baseline
+- class: baselines.ar.AssociationRules
+  params: {}
+  key: AssociationRules
+- class: slist.slist.SLIST
+  params: {}
+  key: SLIST

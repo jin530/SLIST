@@ -1,0 +1,38 @@
+---
+type: window_all # single|window, maybe add opt
+key: SLIST #added to the csv names
+evaluation: evaluation #evaluation|evaluation_last|evaluation_multiple
+data:
+  name: diginetica-window #added in the end of the csv names
+  folder: data/diginetica/slices/
+  prefix: train-item-views
+  slices: 5
+  # opts: {sessions_test: 1000}
+
+results:
+  folder: results/window/diginetica/
+
+metrics_next:
+- class: time_memory_usage.Time_usage_training
+- class: accuracy.HitRate
+  length: [1, 3, 5, 10, 20] 
+- class: accuracy.MRR
+  length: [1, 3, 5, 10, 20]
+  
+metrics_multiple:
+- class: accuracy_multiple.Precision
+  length: [1, 3, 5, 10, 20]
+- class: accuracy_multiple.Recall
+  length: [1, 3, 5, 10, 20]
+- class: accuracy_multiple.MAP
+  length: [1, 3, 5, 10, 20]
+- class: coverage.Coverage
+  length: [1, 3, 5, 10, 20]
+- class: popularity.Popularity
+  length: [1, 3, 5, 10, 20]
+- class: time_memory_usage.Time_usage_testing
+
+algorithms:
+- class: slist.slist.SLIST
+  params: {alpha: 0.8, direction: sr, reg: 10, train_weight: 1, predict_weight: 2, session_weight: 256}
+  key: SLIST
