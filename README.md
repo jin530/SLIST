@@ -1,5 +1,5 @@
 # SLIST
-This is officail code for the Web Conference 2021 paper: `Session-aware Linear Item-Item Models for Session-based Recommendation`.</br>
+This is officail code for the Web Conference 2021 paper: [`Session-aware Linear Item-Item Models for Session-based Recommendation`](https://arxiv.org/abs/2103.16104).</br>
 We implemented our model based on the session-recommedndation framework [**session-rec**](https://github.com/rn5l/session-rec), and you can find the other session-based models and detailed usage on there.</br> 
 Thank you for sharing the code.
 
