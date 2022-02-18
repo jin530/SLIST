@@ -1,8 +1,10 @@
 # SLIST
+
+Update 02/18/2022: [Please check this link for an improved version of SLIST](https://github.com/jin530/SWalk)
+
 This is officail code for the Web Conference 2021 paper: [`Session-aware Linear Item-Item Models for Session-based Recommendation`](https://arxiv.org/abs/2103.16104).</br>
 We implemented our model based on the session-recommedndation framework [**session-rec**](https://github.com/rn5l/session-rec), and you can find the other session-based models and detailed usage on there.</br> 
 Thanks for sharing the code.
-
 **`README.md` and the comments in source code will be updated, again.**
 
 The slides can be found [here](https://www.slideshare.net/ssuser1f2162/sessionaware-linear-itemitem-models-for-sessionbased-recommendation-www-2021) or [here](https://drive.google.com/file/d/1h4UOPWnpj5_90CFf0DYtE_NqTDYrOpAX/view?usp=sharing).
